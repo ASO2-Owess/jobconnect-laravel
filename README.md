@@ -1,6 +1,8 @@
-Voici un README plus complet et orienté "présentation portfolio" (utile autant pour ce test technique que pour ton profil Upwork/GitHub en général) :
+Je vois le problème : il y a des **fences de code mal fermées** dans ton fichier — une ligne avec 4 backticks (`` ```` ``) au lieu de 3 juste après le bloc `http`, et la même chose à la toute fin. Ça casse le rendu Markdown sur GitHub (d'où la section "Lisez-moi" vide sur ta capture).
 
-````markdown
+**Remplace tout le contenu de `README.md` par cette version propre (sans les fences en trop) :**
+
+```markdown
 # JobConnect — Job Completion API (Laravel 12 + Sanctum)
 
 Démo technique d'un endpoint RESTful sécurisé, conçue pour illustrer une implémentation propre du flow de finalisation de mission sur une plateforme de mise en relation emploi-candidature (type marketplace freelance).
@@ -36,17 +38,16 @@ Content-Type: application/json
     "notes": "Travail terminé avec succès"
 }
 ```
-````
 
 ### Réponses possibles
 
-| Scénario                               | Code HTTP                  |
-| -------------------------------------- | -------------------------- |
-| Client propriétaire, job `in_progress` | `200 OK`                   |
-| Job déjà `completed` (ou autre statut) | `403 Forbidden`            |
-| Utilisateur non propriétaire du job    | `403 Forbidden`            |
-| Champ `notes` invalide                 | `422 Unprocessable Entity` |
-| Token manquant ou invalide             | `401 Unauthorized`         |
+| Scénario | Code HTTP |
+|---|---|
+| Client propriétaire, job `in_progress` | `200 OK` |
+| Job déjà `completed` (ou autre statut) | `403 Forbidden` |
+| Utilisateur non propriétaire du job | `403 Forbidden` |
+| Champ `notes` invalide | `422 Unprocessable Entity` |
+| Token manquant ou invalide | `401 Unauthorized` |
 
 ### Exemple de réponse (`200 OK`)
 
@@ -103,7 +104,12 @@ php artisan serve
 
 **Owess Akpa** — Développeur Full-Stack (Laravel, Flutter, React)
 [GitHub](https://github.com/ASO2-Owess)
-
 ```
 
+**Ensuite :**
+
+```powershell
+git add README.md
+git commit -m "Fix README markdown formatting"
+git push origin main
 ```
