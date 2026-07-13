@@ -1,8 +1,3 @@
-Je vois le problème : il y a des **fences de code mal fermées** dans ton fichier — une ligne avec 4 backticks (`` ```` ``) au lieu de 3 juste après le bloc `http`, et la même chose à la toute fin. Ça casse le rendu Markdown sur GitHub (d'où la section "Lisez-moi" vide sur ta capture).
-
-**Remplace tout le contenu de `README.md` par cette version propre (sans les fences en trop) :**
-
-```markdown
 # JobConnect — Job Completion API (Laravel 12 + Sanctum)
 
 Démo technique d'un endpoint RESTful sécurisé, conçue pour illustrer une implémentation propre du flow de finalisation de mission sur une plateforme de mise en relation emploi-candidature (type marketplace freelance).
@@ -104,12 +99,7 @@ php artisan serve
 
 **Owess Akpa** — Développeur Full-Stack (Laravel, Flutter, React)
 [GitHub](https://github.com/ASO2-Owess)
-```
 
-**Ensuite :**
-
-```powershell
-git add README.md
 git commit -m "Fix README markdown formatting"
 git push origin main
 ```
